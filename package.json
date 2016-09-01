@@ -1,0 +1,12 @@
+{
+  "name": "kth-node-i18n",
+  "version": "1.0.0",
+  "description": "i18n module for both browser and Node.js.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KTH/kth-node-i18n"
+  }
+}

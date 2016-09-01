@@ -1,0 +1,13 @@
+.DS_Store
+
+# IDEA specific
+.idea
+*.iml
+
+# Eclipse specific
+.jshintrc
+.project
+.settings/
+
+# Dependency directory for NPM
+node_modules
