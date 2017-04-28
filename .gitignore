@@ -3,6 +3,10 @@
 # IDEA specific
 .idea
 *.iml
+.vscode
+
+
+coverage
 
 # Eclipse specific
 .jshintrc
