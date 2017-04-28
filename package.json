@@ -1,6 +1,6 @@
 {
   "name": "kth-node-i18n",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "i18n module for both browser and Node.js.",
   "main": "index.js",
   "scripts": {
