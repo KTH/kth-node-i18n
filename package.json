@@ -3,17 +3,24 @@
   "version": "1.0.2",
   "description": "i18n module for both browser and Node.js.",
   "main": "index.js",
+  "author": {
+    "name": "KTH",
+    "email": "infosys@kth.se",
+    "url": "https://github.com/KTH"
+  },
+  "license": "MIT",
   "scripts": {
     "test": "mocha",
     "preversion": "standard && npm run test",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "build": "./build.sh"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/KTH/kth-node-i18n"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.3.0"
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
   }
 }
