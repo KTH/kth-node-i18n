@@ -2,6 +2,7 @@
   "name": "kth-node-i18n",
   "version": "1.0.2",
   "description": "i18n module for both browser and Node.js.",
+  "automaticPublish": "true",
   "main": "index.js",
   "author": {
     "name": "KTH",
@@ -21,6 +22,6 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.0"
+    "mocha": "^8.1.3"
   }
 }
