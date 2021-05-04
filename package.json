@@ -12,7 +12,8 @@
   "license": "MIT",
   "scripts": {
     "test": "mocha",
-    "build": "./build.sh"
+    "build": "./build.sh",
+    "prepare": "bash -c 'if [ -f ./node_modules/.bin/husky ]; then husky install; fi'"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,7 @@
   "devDependencies": {
     "@kth/eslint-config-kth": "^1.0.10",
     "chai": "^4.3.4",
-    "eslint": "^7.24.0",
+    "eslint": "^7.25.0",
     "husky": "^6.0.0",
     "mocha": "^8.3.2",
     "prettier": "^2.2.1",
