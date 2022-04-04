@@ -24,7 +24,7 @@
     "i18n"
   ],
   "devDependencies": {
-    "@kth/eslint-config-kth": "^1.0.10",
+    "@kth/eslint-config-kth": "^3.0.4",
     "chai": "^4.3.4",
     "eslint": "^7.25.0",
     "husky": "^7.0.1",
