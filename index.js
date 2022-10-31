@@ -5,10 +5,14 @@ const _DEFAULT_LANG = 'sv'
  * Fetches a language by its short name.
  * Returns undefined if no language was found.
  */
-function _getLanguageByShortname(shortName) {
+function _getLanguageByShortname(shortName = _DEFAULT_LANG) {
+  if (!shortName) return undefined
   for (const i in messages) {
     for (const u in messages[i].shortNames) {
-      if (shortName && messages[i].shortNames[u].toLowerCase() === shortName.toLowerCase()) {
+      if (
+        typeof messages[i].shortNames[u] === 'string' &&
+        messages[i].shortNames[u].toLowerCase() === shortName.toLowerCase()
+      ) {
         return messages[i]
       }
     }
