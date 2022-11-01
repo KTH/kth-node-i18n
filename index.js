@@ -22,8 +22,9 @@ function _getLanguageByShortname(shortName = _DEFAULT_LANG) {
 
 function getCookie(cname) {
   if (typeof document === 'undefined') {
-    return
+    return ''
   }
+  // eslint-disable-next-line no-shadow
   const name = cname + '='
   const ca = document.cookie.split(';')
   for (let i = 0; i < ca.length; i++) {
@@ -31,6 +32,7 @@ function getCookie(cname) {
     while (c.charAt(0) === ' ') c = c.substring(1)
     if (c.indexOf(name) === 0) return c.substring(name.length, c.length)
   }
+  return ''
 }
 
 /**
