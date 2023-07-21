@@ -1,9 +1,9 @@
 {
   "name": "kth-node-i18n",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "i18n module for both browser and Node.js.",
   "automaticPublish": "true",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": {
     "name": "KTH",
     "email": "infosys@kth.se",
@@ -11,11 +11,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "lint": "eslint \"**/*.js\" --quiet",
-    "lint-v": "eslint \"**/*.js\" ",
+    "lint": "eslint \"src/**/*.ts\" --quiet",
+    "lint-v": "eslint \"src/**/*.ts\" ",
     "test": "jest",
     "jest": "jest",
-    "build": "./build.sh",
+    "build": "tsc",
     "prepare": "bash -c 'if [ -f ./node_modules/.bin/husky ]; then husky install; fi'"
   },
   "repository": {
@@ -28,14 +28,18 @@
   ],
   "devDependencies": {
     "@kth/eslint-config-kth": "^3.0.10",
+    "@types/jest": "^29.5.3",
     "eslint": "^8.26.0",
     "husky": "^8.0.1",
     "jest": "^29.2.2",
     "jest-extended": "^3.1.0",
     "prettier": "^2.7.1",
-    "pretty-quick": "^3.1.3"
+    "pretty-quick": "^3.1.3",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
   },
   "jest": {
+    "preset": "ts-jest",
     "clearMocks": true,
     "setupFilesAfterEnv": [
       "jest-extended/all"
