@@ -1,4 +1,4 @@
-const i18n = require('./index')
+import i18n from './index'
 
 i18n.messages.push(
   {
@@ -37,7 +37,7 @@ describe('Testing i18n', () => {
   it('should get a message with default language on browser', () => {
     global.document = {
       cookie: ' language=en;blabla=blabla',
-    }
+    } as Document
     const msg = i18n.message('message')
     expect(msg).toBe('Message')
   })
