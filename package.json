@@ -1,8 +1,10 @@
 {
   "name": "kth-node-i18n",
-  "version": "1.0.3",
+  "version": "1.0.18",
   "description": "i18n module for both browser and Node.js.",
-  "automaticPublish": "true",
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "author": {
     "name": "KTH",
