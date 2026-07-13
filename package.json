@@ -16,7 +16,6 @@
     "lint": "eslint \"**/*.js\" --quiet",
     "lint-v": "eslint \"**/*.js\" ",
     "test": "jest",
-    "jest": "jest",
     "build": "./build.sh",
     "prepare": "husky"
   },
