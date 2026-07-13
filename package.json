@@ -2,7 +2,6 @@
   "name": "kth-node-i18n",
   "version": "1.0.2",
   "description": "i18n module for both browser and Node.js.",
-  "automaticPublish": "true",
   "main": "index.js",
   "author": {
     "name": "KTH",
@@ -10,6 +9,9 @@
     "url": "https://github.com/KTH"
   },
   "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "lint": "eslint \"**/*.js\" --quiet",
     "lint-v": "eslint \"**/*.js\" ",
