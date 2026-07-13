@@ -3,6 +3,12 @@
   "version": "1.0.2",
   "description": "i18n module for both browser and Node.js.",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
   "author": {
     "name": "KTH",
     "email": "infosys@kth.se",
