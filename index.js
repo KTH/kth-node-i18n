@@ -1,5 +1,6 @@
 const messages = []
 const _DEFAULT_LANG = 'sv'
+let hasWarnedUninitializedMessages = false
 
 /**
  * Fetches a language by its short name.
@@ -52,6 +53,13 @@ function _message(key, overrideLang) {
   // In some setups multiple instances of this package can be loaded,
   // and the current instance may not have been populated with messages.
   if (!lang || !lang.messages) {
+    if (!hasWarnedUninitializedMessages) {
+      hasWarnedUninitializedMessages = true
+      // eslint-disable-next-line no-console
+      console.warn(
+        '[kth-node-i18n] No language messages are loaded in this module instance. This can happen when multiple copies of kth-node-i18n are installed. Check your dependency tree and run "npm ls kth-node-i18n".'
+      )
+    }
     return 'KEY ' + key + ' FOR LANGUAGE ' + language + ' DOES NOT EXIST'
   }
 

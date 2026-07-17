@@ -19,12 +19,29 @@ i18n.messages.push(
   }
 )
 describe('Testing i18n', () => {
+  it('should warn once when no languages are configured', () => {
+    const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {})
+
+    jest.isolateModules(() => {
+      const isolatedI18n = require('./index')
+      isolatedI18n.message('message', 'en')
+      isolatedI18n.message('message', 'en')
+    })
+
+    expect(warnSpy).toHaveBeenCalledTimes(1)
+    warnSpy.mockRestore()
+  })
+
   it('should return a fallback message when no languages are configured', () => {
+    const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {})
+
     jest.isolateModules(() => {
       const isolatedI18n = require('./index')
       const msg = isolatedI18n.message('message', 'en')
       expect(msg).toBe('KEY message FOR LANGUAGE en DOES NOT EXIST')
     })
+
+    warnSpy.mockRestore()
   })
 
   it('should get a message by language', () => {
