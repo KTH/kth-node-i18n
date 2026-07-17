@@ -49,6 +49,12 @@ function _message(key, overrideLang) {
   // Try to find a language. Use the default (se) if missing.
   const lang = _getLanguageByShortname(language) || _getLanguageByShortname(_DEFAULT_LANG)
 
+  // In some setups multiple instances of this package can be loaded,
+  // and the current instance may not have been populated with messages.
+  if (!lang || !lang.messages) {
+    return 'KEY ' + key + ' FOR LANGUAGE ' + language + ' DOES NOT EXIST'
+  }
+
   // Make sure we see if a key is missing
   if (lang.messages[key] === undefined) {
     return 'KEY ' + key + ' FOR LANGUAGE ' + lang.longNameEn + ' DOES NOT EXIST'

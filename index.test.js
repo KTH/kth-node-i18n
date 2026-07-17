@@ -19,6 +19,14 @@ i18n.messages.push(
   }
 )
 describe('Testing i18n', () => {
+  it('should return a fallback message when no languages are configured', () => {
+    jest.isolateModules(() => {
+      const isolatedI18n = require('./index')
+      const msg = isolatedI18n.message('message', 'en')
+      expect(msg).toBe('KEY message FOR LANGUAGE en DOES NOT EXIST')
+    })
+  })
+
   it('should get a message by language', () => {
     const msg = i18n.message('message', 'en')
     expect(msg).toBe('Message')
