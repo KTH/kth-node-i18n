@@ -34,13 +34,13 @@
     "i18n"
   ],
   "devDependencies": {
-    "@kth/eslint-config-kth": "^4.1.0",
+    "@kth/eslint-config-kth": "^4.1.1",
     "eslint": "^9.39.5",
     "husky": "^9.1.7",
-    "jest": "^30.4.2",
+    "jest": "^30.5.2",
     "jest-extended": "^7.0.0",
-    "lint-staged": "^17.0.8",
-    "prettier": "^3.9.5"
+    "lint-staged": "^17.6.1",
+    "prettier": "^3.10.1"
   },
   "jest": {
     "clearMocks": true,
